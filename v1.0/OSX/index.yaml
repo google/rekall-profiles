@@ -10,5 +10,5 @@ symbols:
     name: "_version"
 
     # The data we expect to find at that offset.
-    data: ["Darwin Kernel Version "]
+    data: ["string:Darwin Kernel Version "]
 
