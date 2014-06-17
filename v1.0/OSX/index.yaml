@@ -16,7 +16,3 @@ symbols:
     name: "_osbuilder"
     data: ["string:root\x00"]
 
-  -
-    name: "_b_to_q"
-    data: ["554889e5415741564154534889d34189"]
-
