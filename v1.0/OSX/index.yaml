@@ -1,0 +1,18 @@
+# This is the definition file for the index generator.
+
+repository_root: ./
+path: OSX
+# Offset should be relative to the "Catfish\0\0" string.
+base_symbol: "_lowGlo"
+symbols:
+  -
+    # The name of the symbol we test for.
+    name: "_version"
+
+    # The data we expect to find at that offset.
+    data: ["string:Darwin Kernel Version "]
+
+  -
+    name: "_osbuilder"
+    data: ["string:root\x00"]
+
