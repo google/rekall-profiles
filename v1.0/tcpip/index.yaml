@@ -8,13 +8,15 @@ symbols:
     name: "str:IPSecDeleteInboundOutboundSaPair"
 
     # The data we expect to find at that offset.
-    data: ["495053656344656c657465496e626f756e644f7574626f756e64536150616972"]
+    data:
+      - "495053656344656c657465496e626f756e644f7574626f756e64536150616972"
 
     shift: 0
 
   -
     name: "str:FwpsInjectionHandleCreate0"
-    data: "46777073496e6a656374696f6e48616e646c65437265617465"
+    data:
+      - "46777073496e6a656374696f6e48616e646c65437265617465"
 
   - # Functions are always preceeded with NOP instructions.
     name: "IppPolicyIndex"

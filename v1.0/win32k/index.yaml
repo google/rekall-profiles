@@ -8,27 +8,32 @@ symbols:
     name: "str:GUIFont.Height"
 
     # The data we expect to find at that offset.
-    data: ["47005500490046006f006e0074002e00480065006900670068007400"]
+    data:
+      - "47005500490046006f006e0074002e00480065006900670068007400"
 
   -
     # The name of the symbol we test for.
     name: "str:EngMapFile"
 
     # The data we expect to find at that offset.
-    data: ["456e674d617046696c65"]
+    data:
+      - "456e674d617046696c65"
 
   -
     name: "wcschr"
     shift: -1
-    data: ["90"]
+    data:
+      - "90"
 
   -
     name: "GetWin32kDriverObject"
     shift: -1
-    data: ["90"]
+    data:
+      - "90"
 
   -
     name: "GreGetBoundsRect"
     shift: -1
-    data: ["90"]
+    data:
+      - "90"
 
