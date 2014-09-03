@@ -1,6 +1,5 @@
 # This is the definition file for the index generator.
 
-repository_root: ./
 path: nt
 symbols:
   -
@@ -8,28 +7,44 @@ symbols:
     name: "str:KernelSpace"
 
     # The data we expect to find at that offset.
-    data: ["4b65726e656c5370616365"]
-
-    shift: 0
+    data:
+      - "str:KernelSpace"
 
   -
     # The name of the symbol we test for.
     name: "str:ZwQueryInformationFile"
 
     # The data we expect to find at that offset.
-    data: ["5a775175657279496e666f726d6174696f6e46696c65"]
-
-    shift: 0
+    data:
+      - "str:ZwQueryInformationFile"
 
   -
     # The name of the symbol we test for.
     name: "str:IRP_MN_QUERY_DEVICE_TEXT"
 
     # The data we expect to find at that offset.
-    data: ["4952505f4d4e5f51554552595f4445564943455f54455854"]
+    data:
+      - "str:IRP_MN_QUERY_DEVICE_TEXT"
 
-    shift: 0
+  -
+    name: str:ExAllocatePoolWithQuotaTag
+    data:
+      - str:ExAllocatePoolWithQuotaTag
 
+  -
+    name: str:PAGEenabled
+    data:
+      - str:PAGEenabled
+
+  -
+    name: str:APEGReferenceCount
+    data:
+      - str:APEGReferenceCount
+
+  -
+    name: str:APP_NAME
+    data:
+      - str:APP_NAME
 
   - # Functions are always preceeded with NOP instructions.
     name: "wcschr"
@@ -40,3 +55,44 @@ symbols:
     name: "_wcschr"
     data: ["90"]
     shift: -1
+
+  -
+    name: ExEnumHandleTable
+    data: ["90"]
+    shift: -1
+
+  -
+    name: FsRtlAllocateFileLock
+    data: ["90"]
+    shift: -1
+
+  -
+    name: VdmOpcodeGetDrx
+    data: ["90"]
+    shift: -1
+
+  -
+    name: RtlQueryInformationAcl
+    data: ["90"]
+    shift: -1
+
+  -
+    name: RtlFillMemory
+    data: ["90"]
+    shift: -1
+
+  -
+    name: IoFreeIrp
+    data: ["90"]
+    shift: -1
+
+  -
+    name: RtlpGetRegistryHandleAndPath
+    data: ["90"]
+    shift: -1
+
+  -
+    name: StringCchCopyNW
+    data: ["90"]
+    shift: -1
+
