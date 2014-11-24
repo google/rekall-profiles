@@ -10,9 +10,9 @@ symbols:
     name: "_version"
 
     # The data we expect to find at that offset.
-    data: ["string:Darwin Kernel Version "]
+    data: ["str:Darwin Kernel Version "]
 
   -
     name: "_osbuilder"
-    data: ["string:root\x00"]
+    data: ["str:root\x00"]
 
