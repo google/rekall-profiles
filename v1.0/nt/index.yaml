@@ -44,7 +44,7 @@ symbols:
   -
     name: str:APP_NAME
     data:
-      - str:APP_NAME
+      - lstr:APP_NAME
 
   - # Functions are always preceeded with NOP instructions.
     name: "wcschr"
@@ -77,7 +77,7 @@ symbols:
     shift: -1
 
   -
-    name: RtlFillMemory
+    name: RtlPrefetchMemoryNonTemporal
     data: ["90"]
     shift: -1
 
@@ -95,4 +95,3 @@ symbols:
     name: StringCchCopyNW
     data: ["90"]
     shift: -1
-
