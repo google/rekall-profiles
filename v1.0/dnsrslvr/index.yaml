@@ -1,0 +1,10 @@
+path: dnsrslvr
+symbols:
+  -
+    name: g_CacheHeap
+    data:
+      - "g_CacheHeap"
+  -
+    name: g_HashTable
+    data:
+      - "g_HashTable"
