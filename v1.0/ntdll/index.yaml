@@ -18,6 +18,25 @@ symbols:
     shift: -1
 
   -
+    name: RtlImageRvaToSection
+    data: ["90"]
+    shift: -1
+
+  -
+    name: ComputeNameLength
+    data: ["90"]
+    shift: -1
+
+  -
+    name: NtAllocateVirtualMemory
+    data: ["90"]
+    shift: -1
+
+  -
+    name: NativePageShift
+    data: ["0c"]
+
+  -
     name: RtlDeleteHashTable
     data: ["90"]
     shift: -1
@@ -31,6 +50,11 @@ symbols:
     name: str:LdrpSnapIAT
     data:
       - str:LdrpSnapIAT
+
+  -
+    name: str:Restricted
+    data:
+      - lstr:Restricted
 
   -
     name: newcumap
