@@ -1,0 +1,28 @@
+path: conhost
+symbols:
+  -
+    name: gConsoleInformation
+    data:
+      - "str:gConsoleInformation"
+
+  -
+    name: str:Console
+    data:
+      - str:Console
+
+  -
+    name: NtGdiFrameRgn
+    shift: -1
+    data:
+      - "90"
+
+  -
+    name: GetStringBitmapW
+    shift: -1
+    data:
+      - "90"
+
+  -
+    name: str:UnlinkAndShrinkFontImagesByOne:_
+    data:
+      - "str:UnlinkAndShrinkFontImagesByOne"
