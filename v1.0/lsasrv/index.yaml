@@ -1,0 +1,52 @@
+path: lsasrv
+symbols:
+
+  -
+    name: str:AuditPolicySD
+    data:
+      - lstr:AuditPolicySD
+
+  -
+    name: CredEnterpriseDataText
+    data:
+      - "lstr:Enterprise Credential"
+
+  -
+    name: szPreferredPackage
+    data:
+      - "lstr:Preferred"
+
+  -
+    name: NegPackageComment
+    data:
+      - "lstr:Microsoft"
+
+  -
+    name: MsDllNameString
+    data:
+      - "lstr:msprivs"
+
+  -
+    name: NegpGlobalSourceContext
+    data:
+      - str:Negotiat
+
+  -
+    name: LsaInitializeProtectedMemory
+    data: ["90"]
+    shift: -1
+
+  -
+    name: LsaIFilterNamespace
+    data: ["90"]
+    shift: -1
+
+  -
+    name: LsaIAddNamesToLogonSession
+    data: ["90"]
+    shift: -1
+
+  -
+    name: LsapNtAuthority
+    data: ["90"]
+    shift: -1
