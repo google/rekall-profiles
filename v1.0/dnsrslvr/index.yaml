@@ -7,8 +7,32 @@ symbols:
   -
     name: g_CacheHeap
     data:
-      - "00"
+      - "str:"
   -
     name: g_HashTable
     data:
-      - "00"
+      - "str:"
+  -
+    name: str:no_DNS_servers
+    data:
+      - "str:no DNS servers"
+
+  -
+    name: ServiceMain
+    data: ["90"]
+    shift: -1
+
+  -
+    name: NotifyThread
+    data: ["90"]
+    shift: -1
+
+  -
+    name: Reg_GetValueEx
+    data: ["90"]
+    shift: -1
+
+  -
+    name: SrvRecordCopy
+    data: ["90"]
+    shift: -1
