@@ -28,6 +28,11 @@ symbols:
     shift: -1
 
   -
+    name: LdrpFindLoadedDllByName
+    data: ["90"]
+    shift: -1
+
+  -
     name: NtAllocateVirtualMemory
     data: ["90"]
     shift: -1
@@ -50,6 +55,16 @@ symbols:
     name: str:LdrpSnapIAT
     data:
       - str:LdrpSnapIAT
+
+  -
+    name: str:ntdll.dll
+    data:
+      - lstr:ntdll.dll
+
+  -
+    name: str:svchost.exe
+    data:
+      - lstr:svchost.exe
 
   -
     name: str:Restricted
