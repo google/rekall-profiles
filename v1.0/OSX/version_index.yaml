@@ -2,7 +2,7 @@
 
 repository_root: ./
 path: OSX
-# Offset should be relative to the "Catfish\0\0" string.
+
 symbols:
   -
     # The name of the symbol we test for.
