@@ -58,65 +58,60 @@ symbols:
 
   - # Functions are always preceeded with NOP instructions.
     name: "wcschr"
-    data: ["90"]
+    data: ["90", "CC"]
     shift: -1
 
   - # Functions are always preceeded with NOP instructions.
     name: "_wcschr"
-    data: ["90"]
+    data: ["90", "CC"]
     shift: -1
 
   -
     name: ExEnumHandleTable
-    data: ["90"]
+    data: ["90", "CC"]
     shift: -1
 
   -
     name: FsRtlAllocateFileLock
-    data: ["90"]
+    data: ["90", "CC"]
     shift: -1
 
   -
     name: VdmOpcodeGetDrx
-    data: ["90"]
+    data: ["90", "CC"]
     shift: -1
 
   -
     name: RtlQueryInformationAcl
-    data: ["90"]
+    data: ["90", "CC"]
     shift: -1
 
   -
     name: RtlPrefetchMemoryNonTemporal
-    data: ["90"]
+    data: ["90", "CC"]
     shift: -1
 
   -
     name: IoFreeIrp
-    data: ["90"]
+    data: ["90", "CC"]
     shift: -1
 
   -
     name: RtlpGetRegistryHandleAndPath
-    data: ["90"]
+    data: ["90", "CC"]
     shift: -1
 
   -
     name: StringCchCopyNW
-    data: ["90"]
-    shift: -1
-
-  -
-    name: SmFeEmptyComplete
-    data: ["90"]
+    data: ["90", "CC"]
     shift: -1
 
   -
     name: AlpcRegisterLogRoutine
-    data: ["90"]
+    data: ["90", "CC"]
     shift: -1
 
   -
     name: CmRenameKey
-    data: ["90"]
+    data: ["90", "CC"]
     shift: -1
