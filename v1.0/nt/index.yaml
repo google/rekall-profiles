@@ -82,11 +82,6 @@ symbols:
     shift: -1
 
   -
-    name: RtlQueryInformationAcl
-    data: ["90", "CC"]
-    shift: -1
-
-  -
     name: RtlPrefetchMemoryNonTemporal
     data: ["90", "CC"]
     shift: -1
@@ -98,11 +93,6 @@ symbols:
 
   -
     name: RtlpGetRegistryHandleAndPath
-    data: ["90", "CC"]
-    shift: -1
-
-  -
-    name: StringCchCopyNW
     data: ["90", "CC"]
     shift: -1
 
