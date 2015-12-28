@@ -1,0 +1,107 @@
+# This is the definition file for the index generator.
+
+path: nt
+symbols:
+  -
+    # The name of the symbol we test for.
+    name: "str:KernelSpace"
+
+    # The data we expect to find at that offset.
+    data:
+      - "str:KernelSpace"
+
+  -
+    # The name of the symbol we test for.
+    name: "str:ZwQueryInformationFile"
+
+    # The data we expect to find at that offset.
+    data:
+      - "str:ZwQueryInformationFile"
+
+  -
+    # The name of the symbol we test for.
+    name: "str:IRP_MN_QUERY_DEVICE_TEXT"
+
+    # The data we expect to find at that offset.
+    data:
+      - "str:IRP_MN_QUERY_DEVICE_TEXT"
+
+  -
+    name: str:ExAllocatePoolWithQuotaTag
+    data:
+      - str:ExAllocatePoolWithQuotaTag
+
+  -
+    name: str:PAGEenabled
+    data:
+      - str:PAGEenabled
+
+  -
+    name: str:APEGReferenceCount
+    data:
+      - str:APEGReferenceCount
+
+  -
+    name: str:APP_NAME
+    data:
+      - lstr:APP_NAME
+
+  -
+    name: CmpVendorID
+    data:
+      - lstr:VendorId
+
+  -
+    name: CmpMHz
+    data:
+      - "lstr:~MHz"
+
+  - # Functions are always preceeded with NOP instructions.
+    name: "wcschr"
+    data: ["90", "CC"]
+    shift: -1
+
+  - # Functions are always preceeded with NOP instructions.
+    name: "_wcschr"
+    data: ["90", "CC"]
+    shift: -1
+
+  -
+    name: ExEnumHandleTable
+    data: ["90", "CC"]
+    shift: -1
+
+  -
+    name: FsRtlAllocateFileLock
+    data: ["90", "CC"]
+    shift: -1
+
+  -
+    name: VdmOpcodeGetDrx
+    data: ["90", "CC"]
+    shift: -1
+
+  -
+    name: RtlPrefetchMemoryNonTemporal
+    data: ["90", "CC"]
+    shift: -1
+
+  -
+    name: IoFreeIrp
+    data: ["90", "CC"]
+    shift: -1
+
+  -
+    name: RtlpGetRegistryHandleAndPath
+    data: ["90", "CC"]
+    shift: -1
+
+  -
+    name: AlpcRegisterLogRoutine
+    data: ["90", "CC"]
+    shift: -1
+
+  -
+    name: CmRenameKey
+    data: ["90", "CC"]
+    shift: -1

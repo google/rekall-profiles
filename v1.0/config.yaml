@@ -1,0 +1,89 @@
+# Rekall profile repository configuration file.
+
+nt/GUID:
+  type: WindowsGUIDProfile
+  guids: src/nt/guids.yaml
+  has_structs: true
+  index: src/nt/index.yaml
+
+conhost/GUID:
+  type: WindowsGUIDProfile
+  guids: src/conhost/guids.yaml
+  has_structs: false
+
+dnsrslvr/GUID:
+  type: WindowsGUIDProfile
+  guids: src/dnsrslvr/guids.yaml
+  has_structs: false
+
+lsasrv/GUID:
+  type: WindowsGUIDProfile
+  guids: src/lsasrv/guids.yaml
+  has_structs: false
+
+ntdll/GUID:
+  type: WindowsGUIDProfile
+  guids: src/ntdll/guids.yaml
+  has_structs: true
+
+tcpip/GUID:
+  type: WindowsGUIDProfile
+  guids: src/tcpip/guids.yaml
+  has_structs: false
+
+wdigest/GUID:
+  type: WindowsGUIDProfile
+  guids: src/wdigest/guids.yaml
+  has_structs: false
+
+win32k/GUID:
+  type: WindowsGUIDProfile
+  guids: src/win32k/guids.yaml
+  has_structs: false
+
+
+OSX/dynamic:
+  type: CopyAndTransform
+  source: src/OSX/dynamic.yaml
+
+OSX:
+  type: OSXProfile
+  transforms:
+    merge:
+      - OSX/dynamic
+  sources:
+    - src/OSX/10.7.1_11B26.32bit
+    - src/OSX/10.7.1_11B26.64bit
+    - src/OSX/10.7.2_11C74.32bit
+    - src/OSX/10.7.2_11C74.64bit
+    - src/OSX/10.7.3_11D50.32bit
+    - src/OSX/10.7.3_11D50.64bit
+    - src/OSX/10.7.4_11E53.32bit
+    - src/OSX/10.7.4_11E53.64bit
+    - src/OSX/10.7.5_11G56.32bit
+    - src/OSX/10.7.5_11G56.64bit
+    - src/OSX/10.8.1_12B19.64bit
+    - src/OSX/10.8.2_12C54.64bit
+    - src/OSX/10.8.2_12C60.64bit
+    - src/OSX/10.8.3_12D78.64bit
+    - src/OSX/10.8.4_12E55.64bit
+    - src/OSX/10.8.5.64bit
+    - src/OSX/10.9.1_13B42.64bit
+    - src/OSX/10.9.2_13C1021.64bit
+    - src/OSX/10.9.2_13C64.64bit
+    - src/OSX/10.9.3_13D65.64bit
+    - src/OSX/10.9.4_13E28.64bit
+    - src/OSX/10.9.5_13F1066.64bit
+    - src/OSX/10.9.5_13F34.64bit
+    - src/OSX/10.9.5_unknown_build.64bit
+    - src/OSX/10.9.5_unknown_build_2.64bit
+    - src/OSX/10.9_13A603.64bit
+    - src/OSX/10.10.1_14b25.64bit
+    - src/OSX/10.10.2_14c1510.64bit
+    - src/OSX/10.10.3_14D136.64bit
+    - src/OSX/10.10.4_14e46.64bit
+    - src/OSX/10.10.5_14f27.64bit
+    - src/OSX/10.10_14a389.64bit
+    - src/OSX/10.11.1_15b42
+    - src/OSX/10.11_15a284
+    - src/OSX/10.11.2_15c50

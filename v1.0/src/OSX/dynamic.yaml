@@ -1,0 +1,15 @@
+# Dynamic detection of OSX profiles.
+
+$DYNAMIC_CONSTANTS:
+  dyn_llinfo_arp:
+    - type: DisassembleConstantMatcher
+      args:
+        start: __kernel__!_arp_init
+        base: __kernel__
+        rules: [
+        # mov qword ptr [rip + 0x40e948], 0
+        {'mnemonic': 'MOV', 'operands': [
+           {'scale': 1, 'address': $out, 'base': 'RIP', 'type': 'MEM'},
+           {'type': 'IMM', 'target': 0, 'size': 8}],
+        }
+        ]

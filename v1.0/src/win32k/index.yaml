@@ -1,0 +1,45 @@
+# This is the definition file for the index generator.
+
+repository_root: ./
+path: win32k
+symbols:
+  -
+    # The name of the symbol we test for.
+    name: str:GUIFont.Height
+
+    # The data we expect to find at that offset.
+    data:
+      - str:GUIFont.Height
+
+  -
+    # The name of the symbol we test for.
+    name: str:EngMapFile
+
+    # The data we expect to find at that offset.
+    data:
+      - str:EngMapFile
+
+  -
+    name: wcschr
+    shift: -1
+    data:
+      - "90"
+
+  -
+    name: GetWin32kDriverObject
+    shift: -1
+    data:
+      - "90"
+
+  -
+    name: GreGetBoundsRect
+    shift: -1
+    data:
+      - "90"
+
+  -
+    name: xxxSendMessage
+    shift: -1
+    data:
+      - "90"
+

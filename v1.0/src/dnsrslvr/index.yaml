@@ -1,0 +1,38 @@
+path: dnsrslvr
+symbols:
+  # This index is not used in the traditional way - i.e. we do not check for a
+  # constant string at the specified offset. Rather we check and verify for the
+  # hash table and the heap directly. For this reason we typically do not care
+  # if the profiles are ambiguous.
+  -
+    name: g_CacheHeap
+    data:
+      - "str:"
+  -
+    name: g_HashTable
+    data:
+      - "str:"
+  -
+    name: str:no_DNS_servers
+    data:
+      - "str:no DNS servers"
+
+  -
+    name: ServiceMain
+    data: ["90"]
+    shift: -1
+
+  -
+    name: NotifyThread
+    data: ["90"]
+    shift: -1
+
+  -
+    name: Reg_GetValueEx
+    data: ["90"]
+    shift: -1
+
+  -
+    name: SrvRecordCopy
+    data: ["90"]
+    shift: -1
