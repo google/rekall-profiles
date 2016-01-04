@@ -5,6 +5,14 @@ nt/GUID:
   guids: src/nt/guids.yaml
   has_structs: true
   index: src/nt/index.yaml
+  profile_class: Nt
+  transforms:
+    merge:
+      - nt/undocumented
+
+nt/undocumented:
+  type: CopyAndTransform
+  source: src/nt/undocumented.yaml
 
 conhost/GUID:
   type: WindowsGUIDProfile

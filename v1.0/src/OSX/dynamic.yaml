@@ -1,7 +1,7 @@
 # Dynamic detection of OSX profiles.
 
 $DYNAMIC_CONSTANTS:
-  dyn_llinfo_arp:
+  _llinfo_arp:
     - type: DisassembleConstantMatcher
       args:
         start: __kernel__!_arp_init
