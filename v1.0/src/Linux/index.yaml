@@ -1,0 +1,5 @@
+type: symbol_offset
+implementation: LinuxSymbolOffsetIndex
+path: Linux
+base_symbol: "linux_proc_banner"
+min_traits: 6

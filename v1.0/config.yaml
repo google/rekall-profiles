@@ -96,3 +96,7 @@ OSX:
     - src/OSX/10.11.1_15b42
     - src/OSX/10.11_15a284
     - src/OSX/10.11.2_15c50
+
+Linux:
+  type: LinuxProfile
+  index: src/Linux/index.yaml
