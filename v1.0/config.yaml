@@ -6,6 +6,11 @@ nt/GUID:
   has_structs: true
   index: src/nt/index.yaml
   profile_class: Nt
+  possible_guid_filenames:
+    - ntkrnlmp.pdb
+    - ntkrpamp.pdb
+    - ntkrnlpa.pdb
+    - ntoskrnl.pdb
   transforms:
     merge:
       - nt/undocumented
