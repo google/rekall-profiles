@@ -1,6 +1,9 @@
 # This file contains matcher patterns to retrieve reversed undocumented features
 # of the NT kernel.
 
+$METADATA:
+  type: Profile
+
 $DYNAMIC_STRUCTS:
   _IMAGE_ENTRY_IN_SESSION:
     - type: DisassembleStructMatcher
