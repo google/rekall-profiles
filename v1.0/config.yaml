@@ -4,7 +4,11 @@ nt/GUID:
   type: WindowsGUIDProfile
   guids: src/nt/guids.yaml
   has_structs: true
-  index: src/nt/index.yaml
+  index:
+    - src: src/nt/index.yaml
+      dest: nt/index
+    - src: src/nt/eprocess_index.yaml
+      dest: nt/eprocess_index
   profile_class: Nt
   possible_guid_filenames:
     - ntkrnlmp.pdb
@@ -61,7 +65,9 @@ OSX/dynamic:
 
 OSX:
   type: OSXProfile
-  index: src/OSX/index.yaml
+  index:
+    src: src/OSX/index.yaml
+    dst: OSX/index
   transforms:
     merge:
       - OSX/dynamic
@@ -105,4 +111,6 @@ OSX:
 
 Linux:
   type: LinuxProfile
-  index: src/Linux/index.yaml
+  index:
+    src: src/Linux/index.yaml
+    dest: Linux/index

@@ -1,0 +1,12 @@
+# This is the definition file for the index generator.
+
+repository_root: ./
+path: nt
+type: struct
+implementation: EProcessIndex
+members:
+  _EPROCESS:
+    - ImageFileName
+    - Pcb
+  _KPROCESS:
+    - DirectoryTableBase
