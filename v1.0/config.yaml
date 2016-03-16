@@ -112,5 +112,5 @@ OSX:
 Linux:
   type: LinuxProfile
   index:
-    src: src/Linux/index.yaml
-    dest: Linux/index
+    - src: src/Linux/index.yaml
+      dest: Linux/index
