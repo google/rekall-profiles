@@ -66,8 +66,8 @@ OSX/dynamic:
 OSX:
   type: OSXProfile
   index:
-    src: src/OSX/index.yaml
-    dst: OSX/index
+    - src: src/OSX/index.yaml
+      dest: OSX/index
   transforms:
     merge:
       - OSX/dynamic
@@ -108,6 +108,7 @@ OSX:
     - src/OSX/10.11.1_15B42.64bit
     - src/OSX/10.11.2_15C50.64bit
     - src/OSX/10.11.3_15D13b.64bit
+    - src/OSX/10.11.4_15e64.64bit
 
 Linux:
   type: LinuxProfile
