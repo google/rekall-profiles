@@ -4,6 +4,72 @@
 $METADATA:
   type: Profile
 
+# These are types of static constants (like global structs). They are not
+# exported by the PDB file so we hand manage this information here. Note that
+# not all constants are present on all kernel versions, but where they are, we
+# report their types here. Note that this file allows the types to be omitted in
+# calls to get_constant_object. The type will be resolved from this file if it
+# is omitted.
+
+# e.g. session.address_resolver.get_constant_object("nt!MiState")
+$CONSTANT_TYPES:
+    # Windows 10 puts many useful memory manager globals here.
+    MiState:
+        - _MI_SYSTEM_INFORMATION
+
+    # The list of physical memory regions reported by the BIOS.
+    MmPhysicalMemoryBlock:
+        - Pointer
+        - target: _PHYSICAL_MEMORY_DESCRIPTOR
+
+    MiSystemVaType:
+        - Array
+        - target: Enumeration
+        - target_args:
+            target: byte
+            enum_name: _MI_SYSTEM_VA_TYPE
+
+    MiSystemRangeStart:
+        - unsigned int
+
+    # The global array of object types. The _OBJECT_HEADER maps into this array
+    # to retrieve the type definition.
+    ObpObjectTypes:
+       - Array
+       - target: Pointer
+       - target_args:
+           target: _OBJECT_TYPE
+
+    # Kernel/Userspace shared data.
+    KI_USER_SHARED_DATA:
+       - _KUSER_SHARED_DATA
+
+    NtBuildLab:
+       - String
+
+    NtBuildLabEx:
+       - String
+
+    PoolVector:
+       - Array
+       - target: "Pointer"
+       - count: 2
+
+    MmPagedPoolInfo:
+       - _MM_PAGED_POOL_INFO
+
+    # Pointer to the end of paged pool.
+    MmPagedPoolEnd:
+       - Pointer
+
+    # The PFN Database.
+    MmPfnDatabase:
+      - Pointer
+      - target: Array
+      - target_args:
+          - target: _MMPFN
+
+
 $DYNAMIC_STRUCTS:
   _IMAGE_ENTRY_IN_SESSION:
     - type: DisassembleStructMatcher
