@@ -58,10 +58,13 @@ win32k/GUID:
   guids: src/win32k/guids.yaml
   has_structs: false
 
-
 OSX/dynamic:
   type: CopyAndTransform
   source: src/OSX/dynamic.yaml
+
+OSX/macho:
+  type: CopyAndTransform
+  source: src/OSX/macho
 
 OSX:
   type: OSXProfile
