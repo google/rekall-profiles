@@ -112,6 +112,8 @@ OSX:
     - src/OSX/10.11.2_15C50.64bit
     - src/OSX/10.11.3_15D13b.64bit
     - src/OSX/10.11.4_15e64.64bit
+    - src/OSX/10.11.5_141021.64bit
+    - src/OSX/10.11.5_15f34.64bit
 
 Linux:
   type: LinuxProfile
