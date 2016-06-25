@@ -1,0 +1,3 @@
+[submodule "v1.0/src/artifacts/artifacts"]
+	path = v1.0/src/artifacts/artifacts
+	url = https://github.com/ForensicArtifacts/artifacts.git

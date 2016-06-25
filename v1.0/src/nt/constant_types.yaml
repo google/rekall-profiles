@@ -1,0 +1,46 @@
+# These definitions add known constants and their types.
+
+# Apply to all versions.
+- All:
+    - MiState:
+        - _MI_SYSTEM_INFORMATION
+    - MmPhysicalMemoryBlock:
+        - Pointer
+        - target: _PHYSICAL_MEMORY_DESCRIPTOR
+
+    - MiSystemVaType
+        - Array
+        - target: Enumeration
+          target_args:
+            target: byte
+            enum_name: _MI_SYSTEM_VA_TYPE
+
+    - MiSystemRangeStart
+        - unsigned int
+
+    - ObpObjectTypes
+       - Array
+       - target: Pointer
+         target_args:
+           target: _OBJECT_TYPE
+
+    - KI_USER_SHARED_DATA
+       - _KUSER_SHARED_DATA
+
+    - NtBuildLab
+       - String
+
+    - NtBuildLabEx
+       - String
+
+    - PoolVector
+       - Array
+       - target: "Pointer"
+         count: 2
+
+    - MmPagedPoolInfo
+       - _MM_PAGED_POOL_INFO
+
+    # Pointer to the end of paged pool.
+    - MmPagedPoolEnd
+       - Pointer

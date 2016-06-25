@@ -120,3 +120,9 @@ Linux:
   index:
     - src: src/Linux/index.yaml
       dest: Linux/index
+
+artifacts:
+  type: ArtifactProfile
+  patterns:
+    - src/artifacts/memory.yaml
+    - src/artifacts/artifacts/definitions/*yaml
