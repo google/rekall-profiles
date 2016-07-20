@@ -1,14 +1,18 @@
 # Memory specific artifacts.
 
-name: LinuxProcessListing
+name: ProcessListing
 doc: A list of all processes from memory.
 sources:
   - type: REKALL_EFILTER
     attributes:
       query: >
-        select proc, proc.name, proc.pid, ppid, binary from pslist()
+        select proc, proc.name, proc.pid, ppid, start_time, binary from pslist()
 
       type_name: MemoryProcessListing
+
+      image_type:
+        - Linux
+        - LinuxAPI
 
       # Columns from the query will be coerced into these types. NOTE: The order
       # is important and is preserved.
@@ -22,21 +26,19 @@ sources:
           type: int
         - name: ppid
           type: int
+        - name: start_time
+          type: unicode
         - name: binary
           type: unicode
 
-supported_os:
-  - Linux
-
----
-name: WindowsProcessListing
-doc: A list of all processes from memory.
-sources:
   - type: REKALL_EFILTER
     attributes:
+      image_type:
+        - Windows
+
       query: >
         select _EPROCESS as proc, _EPROCESS.name, _EPROCESS.pid, ppid,
-           process_create_time, _EPROCESS.FullPath as binary from pslist()
+           process_create_time as start_time, _EPROCESS.FullPath as binary from pslist()
 
       type_name: MemoryProcessListing
 
@@ -52,13 +54,10 @@ sources:
           type: int
         - name: ppid
           type: int
-        - name: process_create_time
+        - name: start_time
           type: unicode
         - name: binary
           type: unicode
-
-supported_os:
-  - Windows
 
 ---
 
