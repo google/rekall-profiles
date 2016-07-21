@@ -53,6 +53,11 @@ wdigest/GUID:
   guids: src/wdigest/guids.yaml
   has_structs: false
 
+ahcache/GUID:
+  type: WindowsGUIDProfile
+  guids: src/ahcache/guids.yaml
+  has_structs: false
+
 win32k/GUID:
   type: WindowsGUIDProfile
   guids: src/win32k/guids.yaml
