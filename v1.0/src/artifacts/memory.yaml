@@ -27,7 +27,7 @@ sources:
         - name: ppid
           type: int
         - name: start_time
-          type: unicode
+          type: epoch
         - name: binary
           type: unicode
 
@@ -55,7 +55,7 @@ sources:
         - name: ppid
           type: int
         - name: start_time
-          type: unicode
+          type: epoch
         - name: binary
           type: unicode
 
