@@ -73,6 +73,10 @@ sources:
         from maps(proc_regex: "sshd") where flags.x and flags.w
 
       type_name: maps_output
+      image_type:
+        - Linux
+        - LinuxAPI
+
       fields:
         - name: name
           type: unicode
@@ -107,6 +111,8 @@ sources:
       query: >
         select offset_v, file_name, module_base, module_size, path from
           modules() where not (path =~ "(?i)Windows")
+      image_type:
+        - Windows
 
       type_name: modules
       fields:
@@ -143,6 +149,8 @@ sources:
         if (any driverirp(regex: "kbdclass") where not (name=~"kbdclass")) then
           select driver.DriverName, function, func_addres, name from
              driverirp(regex: "kbdclass")
+      image_type:
+        - Windows
 
       type_name: driver_irp
       fields:
@@ -179,6 +187,10 @@ sources:
       query: >
         IF (ANY bash() WHERE command =~ '.*(wget|curl)\s.+\|.*?(bash|zsh|sh)') THEN
           select task, task.name, task.pid, timestamp, command from bash()
+
+      image_type:
+        - Linux
+        - Darwin
 
       type_name: bash
       fields:
@@ -222,6 +234,9 @@ sources:
            where _EPROCESS.InheritedFromUniqueProcessId != services_exe
 
       type_name: MemoryProcessListing
+      image_type:
+        - Windows
+        - WindowsAPI
 
       # Columns from the query will be coerced into these types. NOTE: The order
       # is important and is preserved.
