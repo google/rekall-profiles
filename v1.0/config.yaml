@@ -37,6 +37,9 @@ lsasrv/GUID:
   type: WindowsGUIDProfile
   guids: src/lsasrv/guids.yaml
   has_structs: false
+  index:
+    - src: src/lsasrv/index.yaml
+      dest: lsasrv/index
 
 ntdll/GUID:
   type: WindowsGUIDProfile
