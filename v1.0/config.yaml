@@ -110,11 +110,13 @@ OSX:
     - src/OSX/10.9.5_unknown_build.64bit
     - src/OSX/10.9.5_unknown_build_2.64bit
     - src/OSX/10.9_13A603.64bit
+    - src/OSX/10.9.5_13F1911.64bit
     - src/OSX/10.10.1_14b25.64bit
     - src/OSX/10.10.2_14c1510.64bit
     - src/OSX/10.10.3_14D136.64bit
     - src/OSX/10.10.4_14e46.64bit
     - src/OSX/10.10.5_14f27.64bit
+    - src/OSX/10.10.5_14F2411.64bit
     - src/OSX/10.10_14a389.64bit
     - src/OSX/10.11_15A284.64bit
     - src/OSX/10.11.1_15B42.64bit
@@ -126,12 +128,15 @@ OSX:
     - src/OSX/10.11.6_15G1212.64bit
     - src/OSX/10.11.6_15G1217.64bit
     - src/OSX/10.11.6_15G1421.64bit
+    - src/OSX/10.11.6_15G1510.64bit
     - src/OSX/10.12.0_16A323.64bit
     - src/OSX/10.12.1_16B2657.64bit
     - src/OSX/10.12.2_16C63a.64bit
     - src/OSX/10.12.2_16C67.64bit
     - src/OSX/10.12.3_16D32.64bit
     - src/OSX/10.12.4_16E195.64bit
+    - src/OSX/10.12.5_16F73.64bit
+
 
 Linux:
   type: LinuxProfile
