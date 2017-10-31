@@ -1,6 +1,6 @@
 # This is the definition file for the index generator.
 
-path: nt
+path: nt/
 symbols:
   -
     # The name of the symbol we test for.
