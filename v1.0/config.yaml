@@ -136,6 +136,8 @@ OSX:
     - src/OSX/10.12.3_16D32.64bit
     - src/OSX/10.12.4_16E195.64bit
     - src/OSX/10.12.5_16F73.64bit
+    - src/OSX/10.13.3_17D47.64bit
+    - src/OSX/10.10.5_14F2511.64bit
 
 
 Linux:
